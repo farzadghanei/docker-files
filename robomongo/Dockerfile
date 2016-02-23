@@ -12,7 +12,7 @@ RUN apt-get install -qy dbus
 RUN dbus-uuidgen > /var/lib/dbus/machine-id
 
 WORKDIR /root
-RUN curl http://download.robomongo.org/0.9.0-rc4/linux/robomongo-0.9.0-rc4-linux-x86_64-8c830b6.tar.gz | tar -zx
+RUN curl -L http://download.robomongo.org/0.9.0-rc4/linux/robomongo-0.9.0-rc4-linux-x86_64-8c830b6.tar.gz | tar -zx
 RUN mv robomongo-0.9.0-rc4-linux-x86_64-8c830b6 /opt/robomongo
 
 ENV QT_GRAPHICSSYSTEM native
