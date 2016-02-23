@@ -11,10 +11,6 @@ RUN apt-get install -qy libxcb-render-util0 libxcb-render0 libxcb-randr0
 RUN apt-get install -qy dbus
 RUN dbus-uuidgen > /var/lib/dbus/machine-id
 
-#RUN tar -zxf robomongo-0.9.0-rc4-linux-x86_64-8c830b6.tar.gz
-#RUN rm robomongo-0.9.0-rc4-linux-x86_64-8c830b6.tar.gz
-#RUN mv robomongo-0.9.0-rc4-linux-x86_64-8c830b6/ /opt/robomongo
-
 WORKDIR /root
 RUN curl http://download.robomongo.org/0.9.0-rc4/linux/robomongo-0.9.0-rc4-linux-x86_64-8c830b6.tar.gz | tar -zx
 RUN mv robomongo-0.9.0-rc4-linux-x86_64-8c830b6 /opt/robomongo
