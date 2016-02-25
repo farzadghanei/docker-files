@@ -2,7 +2,13 @@
 Robomongo Dockerfile
 ********************
 
-Build Docker image for `robomongo <https://robomongo.org>`_.
+Build Docker image for `Robomongo <https://robomongo.org>`_.
+
+The image uses essential packages to run and use Robomongo.
+Some features like changing the theme are not considered essential.
+
+Installing `libqt5gui5` would fix this, but will increase the size of the image.
+
 
 Build the image
 
